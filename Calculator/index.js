@@ -1,11 +1,42 @@
 let display = document.getElementById('displayCalc');
+let isNewInput = true;
+
+// function adjustFontSize() {
+//   const contentLength = display.value.length;
+//   if (contentLength < 11) {
+//     display.style.fontSize = '2em';
+//   } else if (contentLength < 14) {
+//     display.style.fontSize = '1.5em';
+//   } else {
+//     display.style.fontSize = '1em';
+//   }
+// }
+
+function adjustFontSize() {
+  const contentLength = display.value.length;
+  if (contentLength < 11) {
+    display.style.fontSize = '2em';
+  } else if (contentLength < 14) {
+    display.style.fontSize = '1.5em';
+  } else {
+    display.style.fontSize = '1em';
+  }
+}
 
 function appendValue(value) {
-  display.value === '0' ? (display.value = value) : (display.value += value);
+  if (isNewInput) {
+    display.value = value;
+    isNewInput = false;
+  } else {
+    display.value += value;
+  }
+
+  adjustFontSize();
 }
 function clearDisplay() {
-  display.value = '';
-  return 0;
+  display.value = '0';
+  isNewInput = true;
+  adjustFontSize();
 }
 
 function clearLastCharacter() {
@@ -15,19 +46,35 @@ function clearLastCharacter() {
     display.value = currentValue.slice(0, -1);
   } else {
     display.value = '0';
+    isNewInput = true;
   }
+  adjustFontSize();
   return 0;
-  // currentValue.length > 0
-  //   ? (display.value = currentValue.slice(1, -1))
-  //   : (display.value = '0');
+}
+
+function percent() {
+  let currentValue = display.value;
+  let numbers = currentValue.split(/[\+\-\*\/]/);
+  let lastNumber = numbers[numbers.length - 1];
+
+  if (lastNumber !== '') {
+    display.value = currentValue.replace(
+      /[\d.]+$/,
+      parseFloat(lastNumber) * 0.01
+    );
+  }
+  adjustFontSize();
+  return display.value;
 }
 
 function calculateResult() {
   try {
     display.value = eval(display.value);
+    isNewInput = true;
   } catch {
     display.value = 'Error';
   }
+  adjustFontSize();
 }
 
 // toggle light and dark theme

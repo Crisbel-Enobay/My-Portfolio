@@ -40,7 +40,7 @@ body{
     justify-content: center;
     border-radius: 20px;
     height: 60vh;
-    width: 35vh;
+    width: 40vh;
     box-shadow: 8px 10px 6px 0px #afb1b5;
 }
 .light{
@@ -60,13 +60,13 @@ body{
 }
 #displayCalc{
     box-sizing: border-box;
-    height: calc(60vh - 50vh);
-    width: calc(35vh - 0vh);
+    height: calc(70vh - 60vh);
+    width: calc(40vh - 0vh);
     margin-bottom: 0.5em;
     border: none;
     text-align: right;
     border-radius: 10px;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
     font-size: 2rem;
 }
 .text-light{
@@ -93,15 +93,12 @@ body{
 .text-color{
     color: #4D12F5;
 }
-/* .text-orange{
-    color: #FFAB08;
-} */
+
 .buttons button{
     border: none;
     margin: 10%;
     border-radius: 50px;
 }
-
 
 #themeDark:hover {
     background-color: #FFAB08;
