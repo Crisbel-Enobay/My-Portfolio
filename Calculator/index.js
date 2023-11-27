@@ -1,17 +1,6 @@
 let display = document.getElementById('displayCalc');
 let isNewInput = true;
 
-// function adjustFontSize() {
-//   const contentLength = display.value.length;
-//   if (contentLength < 11) {
-//     display.style.fontSize = '2em';
-//   } else if (contentLength < 14) {
-//     display.style.fontSize = '1.5em';
-//   } else {
-//     display.style.fontSize = '1em';
-//   }
-// }
-
 function adjustFontSize() {
   const contentLength = display.value.length;
   if (contentLength < 11) {
@@ -30,7 +19,6 @@ function appendValue(value) {
   } else {
     display.value += value;
   }
-
   adjustFontSize();
 }
 function clearDisplay() {
@@ -51,7 +39,6 @@ function clearLastCharacter() {
   adjustFontSize();
   return 0;
 }
-
 function percent() {
   let currentValue = display.value;
   let numbers = currentValue.split(/[\+\-\*\/]/);
@@ -66,7 +53,6 @@ function percent() {
   adjustFontSize();
   return display.value;
 }
-
 function calculateResult() {
   try {
     display.value = eval(display.value);

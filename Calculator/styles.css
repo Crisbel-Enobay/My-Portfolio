@@ -62,7 +62,6 @@ body{
     box-sizing: border-box;
     height: calc(70vh - 60vh);
     width: calc(40vh - 0vh);
-    margin-bottom: 0.5em;
     border: none;
     text-align: right;
     border-radius: 10px;
@@ -79,6 +78,7 @@ body{
     height: calc(60vh - 10vh);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin: 0.5rem 0rem;
 }
 #equal{
     grid-row: span 2;
