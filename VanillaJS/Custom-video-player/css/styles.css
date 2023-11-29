@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #666;
+    margin: 0rem 1rem;
+}
+h1{
+    color: #fff;
+}
+.screen{
+    cursor: pointer;
+    width: 80vh;
+    height: 50vh;
+    background-color: #000 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.controls{
+    background-color: #333;
+    color: #fff;
+    width: 80vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls .btn{
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+.controls .fa-play-circle-o{
+    color: #28a745;
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+}
+.controls .fa-pause-circle-o{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
+}
+.controls .fa-stop-circle-o{
+    color: #dc3545;
+    font-size: 1.6rem;
+    margin-right: 0.2rem;
+}
+.controls .timestamp{
+    color: #fff;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+@media(max-width:600px){
+    .screen, .controls{
+        width: 60vh;
+        margin: 0 2rem;
+    }
+}
