@@ -16,7 +16,9 @@ body{
     color: #fff;
     height: 100vh;
 }
-
+.container{
+    perspective: 1000px;
+}
 .movie-container{
     margin: 1rem 0;
 }
@@ -57,7 +59,35 @@ body{
     cursor: default;
     transform: scale(1);
 }
+.showcase{
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.showcase li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem;
+}
 .row{
     display: flex;
 }
-
+.screen{
+    background-color: #fff;
+    height: 4rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+p.text{
+    margin: 0.5rem 0;
+}
+p.text span{
+    color: #6feaf6;
+}
