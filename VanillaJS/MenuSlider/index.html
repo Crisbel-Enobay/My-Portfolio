@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Slider And Modal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="https://randomuser.me/api/portraits/women/76.jpg"
+          alt="user"
+        />
+      </div>
+      <ul>
+        <li><a href="#"></a>Home</li>
+        <li><a href="#"></a>Portfolio</li>
+        <li><a href="#"></a>Blog</li>
+        <li><a href="#"></a>Contact me</li>
+      </ul>
+    </nav>
+    <header>
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+      <h1>My Landing Page</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+        architecto!
+      </p>
+      <button class="cta-btn" id="open">Sign up</button>
+    </header>
+    <div class="container">
+      <div class="about">
+        <h2>What is this page about?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eum
+          minima veniam, sint ullam natus eos nihil quia cumque rem sed?
+          Voluptates aliquid quidem impedit. Asperiores unde doloribus in at.
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+          amet debitis fugiat aspernatur cumque nihil ullam laborum, nam autem
+          magnam?
+        </p>
+      </div>
+      <div class="more-info">
+        <h2>Tell me more</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+          perferendis neque obcaecati itaque laudantium sed amet corrupti veniam
+          omnis, deserunt, magni dolor. Rerum dicta facere quod amet ad eveniet,
+          commodi officiis corporis repellat eius cupiditate labore ea
+          voluptatibus voluptatem neque?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          repudiandae esse fugiat nobis error, culpa ratione necessitatibus.
+          Cupiditate, hic minima?
+        </p>
+      </div>
+      <div class="benefits">
+        <h2>Benefits</h2>
+        <ul>
+          <li>Lifetime access</li>
+          <li>30 Day Money Back</li>
+          <li>Tailored Customer Support</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="modal-content">
+          <p>Register with us to get offers, support, and more.</p>
+          <form class="modal-form">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter Name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter Email" />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+              />
+            </div>
+            <div>
+              <label for="password2">Confirm Password</label>
+              <input
+                type="password"
+                id="password2"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <p>©2023 Crisbel Enobay | All Rights Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
