@@ -63,12 +63,15 @@ h3{
     justify-content: space-between;
     font-weight: 300;
     margin: 20px 0 0; 
+    color: #1b4159;
+    background: transparent;
 }
 .person{
     display: flex;
     justify-content: space-between;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
+    color: #1b4159;
 }
 button:hover{
     cursor: pointer;
@@ -84,8 +87,5 @@ button:hover{
     }
     aside{
         border: none;
-    }
-    aside, main{
-        text-align: center;
     }
 }
