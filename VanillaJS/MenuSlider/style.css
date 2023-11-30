@@ -307,10 +307,12 @@ footer p{
         height: 50%;
     }
     nav {
-        width: 100%;
+        width: 85%;
+        margin: 0;
     }
     body.show-nav {
-        transform: translateX(100%);  /* Change from translateX(100%) to translateX(0) */
+        transform: translateX(85%);  /* Change from translateX(100%) to translateX(0) */
         overflow-x: hidden;
+        margin: 0;
     }
 }
