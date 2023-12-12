@@ -37,6 +37,16 @@ let randomWord;
 let score = 0;
 // Init time
 let time = 10;
+// Init difficulty default 'medium'
+let difficulty =
+  localStorage.getItem('difficulty') !== null
+    ? localStorage.getItem('difficulty')
+    : 'medium';
+// Set difficulty to value in ls or medium
+difficultySelect.value =
+  localStorage.getItem('difficulty') !== null
+    ? localStorage.getItem('difficulty')
+    : 'medium';
 // focus on text on start
 text.focus();
 // start counting down
@@ -86,7 +96,23 @@ text.addEventListener('input', (e) => {
     updateScore();
     // clear
     e.target.value = '';
-    time += 5;
+
+    if (difficulty === 'easy') {
+      time += 5;
+    } else if (difficulty === 'medium') {
+      time += 3;
+    } else {
+      time += 2;
+    }
+
     updateTime();
   }
+});
+
+// Settings btn click
+settingsBtn.addEventListener('click', () => settings.classList.toggle('hide'));
+// Settings select
+settingsForm.addEventListener('change', (e) => {
+  difficulty = e.target.value;
+  localStorage.setItem('difficulty', difficulty);
 });
