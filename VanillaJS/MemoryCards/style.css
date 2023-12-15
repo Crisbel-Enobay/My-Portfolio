@@ -59,11 +59,17 @@ h1 button{
     left: 0;
     height: 100%;
     width: 100%;
+    transform: translateX(50%) rotateY(-10deg);
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 .card.active{
     opacity: 1;
     cursor: pointer;
     z-index: 10;
+    transform: translateX(0) rotateY(0deg);
+}
+.card.left{
+    transform: translateX(-50%) rotateY(10deg);
 }
 .inner-card{
     box-shadow: 0 1px 10px rgba(0,0,0,0.3);
@@ -71,9 +77,15 @@ h1 button{
     height: 100%;
     width: 100%;
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+.card.show-answer .inner-card{
+    transform: rotateX(180deg);
 }
 .inner-card-front,
 .inner-card-back{
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -82,4 +94,72 @@ h1 button{
     justify-content: center;
     height: 100%;
     width: 100%;
+    background: #fff;
+}
+.inner-card-front{
+    transform: rotateX(0deg);
+    z-index: 2;
+}
+.inner-card-back{
+    transform: rotateX(180deg);
+}
+.inner-card-front::after,
+.inner-card-back::after{
+    content: '\f021 Flip';
+    font-family: 'Font Awesome 5 Free', Lexend, sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ddd;
+}
+.navigation {
+    display: flex;
+    margin: 1rem 0;
+}
+.navigation .nav-button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.navigation p {
+    margin: 0 1rem;
+}
+.add-container{
+    opacity: 0;
+    z-index: -1;
+    background-color: #f0f0f0;
+    border-top: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.3s ease;
+}
+.add-container.show{
+    opacity: 1;
+    z-index: 2;
+}
+.add-container button{
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+.form-group label{
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+.form-group textarea{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 1rem;
+    min-width: 500px;
+    max-width: 100%;
 }
