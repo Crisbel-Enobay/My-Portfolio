@@ -27,7 +27,7 @@ function showData(data) {
         .join('')}
     </ul>
   `;
-  console.log(data.next);
+  console.log(data);
 
   if (data.prev || data.next) {
     more.innerHTML = `
