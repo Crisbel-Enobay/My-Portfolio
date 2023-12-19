@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+*{
+    font-family: 'Lexend', sans-serif;
+}
+body{
+    background: linear-gradient(280deg, rgba(2,0,36,1) 0%, rgb(75, 145, 173) 0%, rgb(189, 237, 253) 68%, rgba(189,252,253,1) 99%);
+    height: 100vh;
+}
+.card{
+    border-radius: 25px;
+    border: none;
+    box-shadow: 1px 5px 8px -5px #566980;
+}

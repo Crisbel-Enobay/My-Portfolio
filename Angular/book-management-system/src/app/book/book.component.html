@@ -1,0 +1,13 @@
+<form>
+  <input
+    type="text"
+    [(ngModel)]="newBookTitle"
+    placeholder="Enter book title..."
+  />
+  <input
+    type="text"
+    [(ngModel)]="newBookAuthor"
+    placeholder="Enter book author..."
+  />
+  <button (click)="addBook()">Add Book</button>
+</form>
